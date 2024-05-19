@@ -21,11 +21,6 @@
       dl-video = "yt-dlp --embed-thumbnail -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --output '%(title)s.%(ext)s'";
       dl-clips = "yt-dlp --embed-thumbnail -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 --ignore-errors --output '/home/ladas552/Videos/clips/%(playlist)s/%(playlist_index)s-%(title)s.%(ext)s' --yes-playlist";
       dl-vocaloid = "yt-dlp --add-metadata --parse-metadata 'playlist_title:%(album)s' --embed-thumbnail --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --output '/home/ladas552/Music/vocaloid/%(playlist_uploader)s/%(playlist)s/%(title)s.%(ext)s' --yes-playlist";
-      mc = "ranger";
-      mcm = "ranger ~/Music/";
-      mcc = "ranger ~/.config/";
-      mcp = "ranger ~/Pictures/";
-      mcf = "ranger ~/.config/Flakes/";
     };
     shellAliases = {
       cat = ''${pkgs.bat}/bin/bat'';
@@ -33,6 +28,11 @@
       df = ''${pkgs.duf}/bin/duf'';
       copypaste = ''${pkgs.wgetpaste}/bin/wgetpaste'';
       cmatrix = ''${pkgs.unimatrix}/bin/unimatrix -f -s 95'';
+      mc = "${pkgs.ranger}/bin/ranger";
+      mcm = "${pkgs.ranger}/bin/ranger ~/Music/";
+      mcc = "${pkgs.ranger}/bin/ranger ~/.config/";
+      mcp = "${pkgs.ranger}/bin/ranger ~/Pictures/";
+      mcf = "${pkgs.ranger}/bin/ranger ~/.config/Flakes/";
     };
   };
 
