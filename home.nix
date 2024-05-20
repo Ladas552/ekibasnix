@@ -40,6 +40,7 @@
       heroic
       prismlauncher
       floorp
+      yt-dlp
 # not checked 
       ncmpcpp
       btop
