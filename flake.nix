@@ -14,7 +14,7 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
 # Catuppuccin
-catppuccin.url = "github:catppuccin/nix";
+    catppuccin.url = "github:catppuccin/nix";
 #yazi.url = "github:sxyazi/yazi"; # Yazi TUI file manager
 #yazi.inputs.nixpkgs.follows = "nixpkgs";
 
