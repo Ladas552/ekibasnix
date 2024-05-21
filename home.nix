@@ -40,6 +40,7 @@
       prismlauncher
       floorp
       yt-dlp
+      xclicker
 # not checked 
       ncmpcpp
       btop
@@ -107,7 +108,7 @@
 # If you wanna set colorscheme from the list in https://github.com/tinted-theming/base16-schemes
 # colorScheme = inputs.nix-colors.colorSchemes.dracula;
 # Catppuccin flake
-catppuccin.flavour = "mocha";
+  catppuccin.flavour = "mocha";
 #ColorScheme LadasAzul
   colorScheme = {
     slug = "lazul";
