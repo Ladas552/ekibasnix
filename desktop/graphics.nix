@@ -36,12 +36,4 @@ xdg.enable = true; #catppuccin wants it
   programs.gpg.enable = true;
 
   services.gpg-agent.enable = true;
-# GUI programs
-  programs = {
-    zathura = {
-      enable = true;
-      catppuccin.enable = true;
-    };
-  };
-
 }

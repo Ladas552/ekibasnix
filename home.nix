@@ -20,6 +20,7 @@
       ./tools/term.nix
       ./tools/shell.nix
       ./tools/nixvim.nix
+      ./tools/gui.nix
   ];
 # Me
   home.username = "ladas552";
@@ -42,10 +43,6 @@
       yt-dlp
       xclicker
 # not checked 
-      ncmpcpp
-      btop
-      fd
-      fzf
       lshw
       ripgrep
       flameshot
