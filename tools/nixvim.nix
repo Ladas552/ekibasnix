@@ -3,7 +3,6 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    package = pkgs.neovim-nightly;
     colorschemes.catppuccin = {
       enable = true;
       settings.flavour = "macchiato"; # "mocha"; darker
