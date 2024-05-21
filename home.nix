@@ -15,12 +15,11 @@
       inputs.nixvim.homeManagerModules.nixvim
       inputs.catppuccin.homeManagerModules.catppuccin
       ./desktop/graphics.nix
-      ./desktop/services.nix
       ./desktop/bspwm.nix
       ./tools/term.nix
       ./tools/shell.nix
       ./tools/nixvim.nix
-      ./tools/gui.nix
+      ./tools/apps.nix
   ];
 # Me
   home.username = "ladas552";
@@ -31,25 +30,18 @@
     home.packages = with pkgs; [
     hello
       cowsay
-      fastfetch
       vesktop
       keepassxc
       libqalculate
       manix
-      mangohud
       heroic
       prismlauncher
       floorp
-      yt-dlp
       xclicker
-# not checked 
       lshw
-      ripgrep
-      flameshot
-      imv
+# not checked 
       niri
       libreoffice-fresh
-      mpv
       pavucontrol
       rofi
       telegram-desktop
