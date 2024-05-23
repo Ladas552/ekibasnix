@@ -13,7 +13,6 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
       inputs.nixvim.homeManagerModules.nixvim
-      inputs.catppuccin.homeManagerModules.catppuccin
       ./desktop/graphics.nix
       ./desktop/bspwm.nix
       ./tools/term.nix
@@ -71,6 +70,7 @@
 #
 #  };
 # Environment and Dependencies
+  xdg.enable = true;
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["neovim.desktop"];
     "application/pdf" = ["zathura.desktop"];
@@ -96,8 +96,6 @@
   };
 # If you wanna set colorscheme from the list in https://github.com/tinted-theming/base16-schemes
 # colorScheme = inputs.nix-colors.colorSchemes.dracula;
-# Catppuccin flake
-  catppuccin.flavour = "mocha";
 #ColorScheme LadasAzul
   colorScheme = {
     slug = "lazul";

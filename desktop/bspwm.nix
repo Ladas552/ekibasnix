@@ -12,15 +12,13 @@
           "[4]"
           "[5]"
           "[6]"
-          "[7]"
-          "[8]"
       ];
     };
     rules = {
       "mpv" = {
         state = "pseudo_tiled";
       };
-      "Telegram-desktop" = {
+      "TelegramDesktop" = {
         state = "floating";
       };
       "Zathura" = {
@@ -31,6 +29,13 @@
       };
       "GenshinImpact.exe" = {
         state = "floating";
+      };
+      "floorp" = {
+      desktop = "^1";
+      };
+      "vesktop" = {
+      desktop = "^6";
+      state = "fullscreen";
       };
  #     "" = {
  #     state = ;

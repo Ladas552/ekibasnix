@@ -1,14 +1,12 @@
 { config, pkgs, lib, inputs, ... }:
 {
 #Themes
-xdg.enable = true; #catppuccin wants it
   gtk = {
     enable = true;
-    catppuccin.enable = true;
-    # theme = {
-    #   name = "Graphite-dark";
-    #   package = pkgs.graphite-gtk-theme;
-    # };
+     theme = {
+       name = "Graphite-dark";
+       package = pkgs.graphite-gtk-theme;
+     };
     iconTheme = {
       name = "Candy";
       package = pkgs.candy-icons;
