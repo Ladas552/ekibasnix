@@ -1,37 +1,61 @@
 { config, pkgs, lib, inputs, ... }:
 {
 #Themes
-  gtk = {
-    enable = true;
-     theme = {
-       name = "Graphite-dark";
-       package = pkgs.graphite-gtk-theme;
-     };
-    iconTheme = {
-      name = "Candy";
-      package = pkgs.candy-icons;
+  stylix = {
+    image = ./wallpapers/Bones.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    autoEnable = true;
+    targets = {
+      bspwm.enable = false;
+      nixvim.enable = false;
+      kitty.enable = false;
+      xfce.enable = true;
+      vesktop.enable = true;
     };
-    cursorTheme = {
-    name = "Graphite";
-    package = pkgs.graphite-cursors;
-    };
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        '';
-    };
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-        '';
+    fonts = {
+      serif = config.stylix.fonts.monospace;
+      sansSerif = config.stylix.fonts.monospace;
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
+      monospace = {
+        package = pkgs.jetbrains-mono;
+        name = "JetBrainsMono";
+      };
     };
   };
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style.name = "adwaita-dark";
-  };
-  programs.gpg.enable = true;
-
-  services.gpg-agent.enable = true;
+#  gtk = {
+#    enable = true;
+#    theme = {
+#      name = "Graphite-dark";
+#      package = pkgs.graphite-gtk-theme;
+#    };
+#    iconTheme = {
+#      name = "Candy";
+#      package = pkgs.candy-icons;
+#    };
+#    cursorTheme = {
+#      name = "Graphite";
+#      package = pkgs.graphite-cursors;
+#    };
+#    gtk3.extraConfig = {
+#      Settings = ''
+#        gtk-application-prefer-dark-theme=1
+#        '';
+#    };
+#    gtk4.extraConfig = {
+#      Settings = ''
+#        gtk-application-prefer-dark-theme=1
+#        '';
+#    };
+#  };
+#  qt = {
+#    enable = true;
+#    platformTheme = "gtk";
+#    style.name = "adwaita-dark";
+#  };
+#  programs.gpg.enable = true;
+#
+#  services.gpg-agent.enable = true;
 }
