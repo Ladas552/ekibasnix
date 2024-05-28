@@ -32,7 +32,6 @@
       mcm = "${pkgs.ranger}/bin/ranger ~/Music/";
       mcc = "${pkgs.ranger}/bin/ranger ~/.config/";
       mcp = "${pkgs.ranger}/bin/ranger ~/Pictures/";
-      mcf = "${pkgs.ranger}/bin/ranger ~/.config/Flakes/";
     };
   };
 

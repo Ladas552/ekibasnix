@@ -9,6 +9,7 @@
       bspwm.enable = false;
       nixvim.enable = false;
       kitty.enable = false;
+      fish.enable = false;
       xfce.enable = true;
       vesktop.enable = true;
     };
