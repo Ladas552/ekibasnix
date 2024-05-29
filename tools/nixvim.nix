@@ -174,6 +174,9 @@
       image = {
         enable = true;
       };
+      auto-save = {
+        enable = true;
+      };
     };
   };
 }
