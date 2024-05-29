@@ -7,6 +7,7 @@
       enable = true;
       settings.flavour = "macchiato"; # "mocha"; darker
     };
+    globals.mapleader = " ";
     extraPlugins = [pkgs.vimPlugins."neorg"];
     extraConfigLua = ''
       vim.wo.foldlevel = 99
@@ -60,7 +61,6 @@
         },
     })
     '';
-    globals.mapleader = " ";
     options = {
 #Numbers on side 
       nu = true;
@@ -152,6 +152,8 @@
       treesitter = {
         enable = true;
         indent = true;
+        folding = true;
+        nixvimInjections = true;
         ensureInstalled = [
           "bash"
             "fish"
@@ -174,6 +176,10 @@
       image = {
         enable = true;
       };
+      auto-save = {
+        enable = true;
+      };
+
     };
   };
 }
