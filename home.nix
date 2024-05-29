@@ -16,9 +16,6 @@
       inputs.stylix.homeManagerModules.stylix
       ./desktop/graphics.nix
       ./desktop/bspwm.nix
-      ./tools/term.nix
-      ./tools/shell.nix
-      ./tools/nixvim.nix
       ./tools/apps.nix
   ];
 # Me

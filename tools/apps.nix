@@ -1,6 +1,13 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+  ./fish.nix
+  ./git.nix
+  ./nixvim.nix
+  ./ranger.nix
+  ./term.nix
+  ];
   programs = {
     zathura = {
       enable = true;
@@ -37,6 +44,9 @@
       enable = true;
     };
     obs-studio = {
+      enable = true;
+    };
+    jujutsu = {
       enable = true;
     };
   };
