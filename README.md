@@ -6,8 +6,9 @@
 - I had problems when first trying out Nix. I hope this config could also help others as so many helped me
 
 # What are the plans
-1. Migrate my NixOS to flake
+1. ~Migrate my NixOS to flake~
 2. Make Nix Secrets to not doxx myself
 3. Write comments for not forgetting functions and what I did even config
 4. Declare much more packages
 5. Declare Nix with Neorg tangle
+6. Make secure SSH connection to my phone to edit on the go
