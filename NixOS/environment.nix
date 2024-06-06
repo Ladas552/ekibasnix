@@ -60,7 +60,7 @@
         xfce4-appfinder
         xfce4-screenshooter
         xfce4-taskmanager
- #       xfce4-terminal 
+        xfce4-terminal 
     ];
   };
   fonts.packages = with pkgs; [
