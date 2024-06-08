@@ -1,6 +1,10 @@
 { config, lib, pkgs, ...}:
-
 {
+  options = {
+    sounds.enable = lib.mkEnableOption "enable sounds";
+  };
+
+  config = lib.mkIf config.sounds.enable {
 # Enable sound with pipewire.
     sound.enable = true;
     hardware.pulseaudio.enable = false;
@@ -17,4 +21,5 @@
 # no need to redefine it in your config for now)
 #media-session.enable = true;
     };
-    }
+  };
+}

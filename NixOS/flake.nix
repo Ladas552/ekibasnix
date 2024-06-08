@@ -17,23 +17,24 @@
         specialArgs = { inherit system; inherit inputs; };
 
         modules = [
-          ./configuration.nix
+          ./hosts/NixToks/configuration.nix
+          inputs.aagl.nixosModules.default
         ];
       };
 
-      NixIso = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; inherit inputs; };
-
-        modules = [
-          ./configuration.nix
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.fixnix = import ./home.nix;
-            }
-        ];
-      };
+      # NixFlash = nixpkgs.lib.nixosSystem {
+      #   specialArgs = { inherit system; inherit inputs; };
+      #
+      #   modules = [
+      #     ./hosts/NixFlash/configuration.nix
+      #       inputs.home-manager.nixosModules.home-manager
+      #       {
+      #         home-manager.useGlobalPkgs = true;
+      #         home-manager.useUserPackages = true;
+      #         home-manager.users.fixnix = import ./home.nix;
+      #       }
+      #   ];
+      # };
     };
   };
 }

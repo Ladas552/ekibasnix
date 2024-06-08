@@ -179,6 +179,39 @@
       auto-save = {
         enable = true;
       };
+      cmp = {
+        enable = true;
+        settings = {
+          sources = {
+          __raw = ''
+          cmp.config.sources({
+          { name = "nvim_lsp" },
+          { name = "luasnip" }, -- snippets
+          { name = "buffer" }, -- text within current buffer
+          { name = "path" }, -- file system paths
+          { name = "neorg" },
+          { name = "vimtex" }, 
+          { name = "codeium" },
+          { name = "copilot" },
+        }),
+          '';
+          };
+           mapping = {
+           __raw = ''
+           cmp.mapping.preset.insert({
+          ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+          ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
+          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+          ["<ESC>"] = cmp.mapping.abort(), -- close completion window
+          ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        })
+           '';
+          };
+        };
+      };
+      cmp-path.enable = true;
     };
   };
 }
