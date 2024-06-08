@@ -28,8 +28,10 @@
 # the path to your home.nix.
       modules = [ 
         ./home.nix
+# HM modules
+        inputs.nixvim.homeManagerModules.nixvim
+        inputs.stylix.homeManagerModules.stylix
       ];
-
 # Optionally use extraSpecialArgs
 # to pass through arguments to home.nix
     };

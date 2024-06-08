@@ -9,15 +9,8 @@
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
   };
 
-  outputs = { self, nixpkgs, aagl} @inputs:
-    let
+  outputs = { self, nixpkgs, aagl, home-manager} @inputs: let
     system = "x86_64-linux";
-
-  pkgs = import nixpkgs {
-    inherit system;
-    config = { allowUnfree = true; };
-  };
-
   in {
     nixosConfigurations = {
       NixToks = nixpkgs.lib.nixosSystem {
@@ -25,6 +18,20 @@
 
         modules = [
           ./configuration.nix
+        ];
+      };
+
+      NixIso = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit system; inherit inputs; };
+
+        modules = [
+          ./configuration.nix
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.fixnix = import ./home.nix;
+            }
         ];
       };
     };
