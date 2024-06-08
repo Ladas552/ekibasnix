@@ -30,10 +30,7 @@
       keepassxc
       libqalculate
       manix
-      heroic
-      prismlauncher
       floorp
-      xclicker
       lshw
       niri
       libreoffice-fresh

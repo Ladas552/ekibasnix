@@ -51,7 +51,6 @@
         gnumake
         open-vm-tools
         libvirt-glib
-        steam-run
     ];
     xfce.excludePackages = with pkgs.xfce; [
       mousepad

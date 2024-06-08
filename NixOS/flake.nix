@@ -3,9 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+# Games
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
   };
 
-  outputs = { self, nixpkgs} @inputs:
+  outputs = { self, nixpkgs, aagl} @inputs:
     let
     system = "x86_64-linux";
 

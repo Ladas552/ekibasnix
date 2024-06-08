@@ -1,12 +1,13 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
       ./environment.nix
-     # ./cachix.nix
-     # ./games.nix
+      ./cachix.nix
+          inputs.aagl.nixosModules.default
+      ./games.nix
     ];
 
 # Bootloader.
