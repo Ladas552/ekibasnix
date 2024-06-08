@@ -101,19 +101,19 @@
 #    options = "--delete-older-than 14d";
 #  };
 
-# antivirus? Idk sounds cool
-  services.clamav = {
-    scanner = {
-      enable = true;
-      interval = "Sat *-*-* 04:00:00";
-    };
-    updater = {
-      enable = true;
-      frequency = 1;
-      interval = "daily";
-    };
-    daemon.enable = true;
-  };
+# antivirus? Idk sounds cool. Don't need it on desktop tho
+#  services.clamav = {
+#    scanner = {
+#      enable = true;
+#      interval = "Sat *-*-* 04:00:00";
+#    };
+#    updater = {
+#      enable = true;
+#      frequency = 1;
+#      interval = "daily";
+#    };
+#    daemon.enable = true;
+#  };
 # SSH connections
   services.openssh = {
     enable = true;
