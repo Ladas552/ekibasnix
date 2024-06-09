@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./../../modules/modules.nix
+    ./apps.nix
     ];
 
 #modules
@@ -14,6 +15,7 @@ openssh.enable = true;
 zerotier.enable = true;
 bluetooth.enable = true;
 printers.enable = true;
+stylix.enable = true;
 
 # Bootloader.
   boot.loader = {

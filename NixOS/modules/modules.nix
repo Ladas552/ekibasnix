@@ -9,6 +9,7 @@ imports = [
 ./desktop/fonts.nix
 ./desktop/games.nix
 ./desktop/lightdm.nix
+./desktop/stylix.nix
 ./network/openssh.nix
 ./network/zerotier.nix
 ./network/bluetooth.nix

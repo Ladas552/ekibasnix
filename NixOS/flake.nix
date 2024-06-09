@@ -7,6 +7,12 @@
 # HM module
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+# Nixvim
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+# ColorScheme
+    stylix.url = "github:danth/stylix";
+
 
 # Games
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
@@ -22,23 +28,25 @@
 
         modules = [
           ./hosts/NixToks/configuration.nix
-          inputs.aagl.nixosModules.default
+            inputs.aagl.nixosModules.default
         ];
       };
 
-       NixFlash = nixpkgs.lib.nixosSystem {
-         specialArgs = { inherit system; inherit inputs; };
-      
-         modules = [
-           ./hosts/NixFlash/configuration.nix
-             inputs.home-manager.nixosModules.home-manager
-             {
-               home-manager.useGlobalPkgs = true;
-               home-manager.useUserPackages = true;
-              home-manager.users.fixnix = import ./hosts/NixFlash/home.nix;
+      NixFlash = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit system; inherit inputs; };
+
+        modules = [
+          ./hosts/NixFlash/configuration.nix
+            inputs.nixvim.nixosModules.nixvim
+            inputs.stylix.nixosModules.stylix
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.fixnix = import ./hosts/NixFlash/apps.nix;
             }
-         ];
-       };
+        ];
+      };
     };
   };
 }
