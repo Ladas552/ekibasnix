@@ -54,7 +54,7 @@
       candy-icons
       catppuccin-cursors
       ];
-
+  nixpkgs.config.allowUnfree = true;
 #  home.file = {
 #
 # # You can also set the file content immediately.

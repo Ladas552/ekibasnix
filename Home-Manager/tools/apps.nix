@@ -44,9 +44,9 @@
     obs-studio = {
       enable = true;
     };
-    jujutsu = {
-      enable = true;
-    };
+    # jujutsu = {
+    #   enable = true;
+    # };
   };
   services = {
     flameshot = {
