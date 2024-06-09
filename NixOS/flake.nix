@@ -19,7 +19,7 @@
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
   };
 
-  outputs = { self, nixpkgs, aagl, home-manager} @inputs: let
+  outputs = { self, nixpkgs, aagl, home-manager, nixvim, stylix} @inputs: let
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
