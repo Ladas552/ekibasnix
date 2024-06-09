@@ -79,9 +79,9 @@ printers.enable = true;
 # services.xserver.libinput.enable = true;
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.ladas553 = {
+    users.users.fixnix = {
       isNormalUser = true;
-      description = "Ladas553";
+      description = "Fixnix";
       extraGroups = [ "networkmanager" "wheel"];
 #packages = with pkgs; [
 # firefox
