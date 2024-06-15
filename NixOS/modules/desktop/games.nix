@@ -20,11 +20,17 @@
     environment.sessionVariables.STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     programs.gamemode.enable = true;
     environment.systemPackages = with pkgs; [
+# PC games
       heroic
         prismlauncher
         xclicker
         bottles
         steam-run
+# Emulators
+        duckstation
+        mgba
+# doesn't work       retroarchFull
+# too complex and need a special controller      mame
     ];
   };
 }

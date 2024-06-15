@@ -8,6 +8,7 @@
   ./nixvim.nix
   ./ranger.nix
   ./term.nix
+  ./qutebrowser.nix
   ];
   programs = {
     zathura = {

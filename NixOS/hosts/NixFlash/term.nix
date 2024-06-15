@@ -1,7 +1,6 @@
 {pkgs, config, inputs, ...}:
 
 {
-  home = {
     programs.kitty = {
       enable = true;
       settings = {
@@ -46,7 +45,6 @@
         tab_bar_background = "#181926";
       };
     };
-  };
 
 }
 

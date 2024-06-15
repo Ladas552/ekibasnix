@@ -4,20 +4,20 @@
 
 imports = [
 ./defaultc.nix
-./desktop/otd.nix
-./desktop/xfce.nix
 ./desktop/fonts.nix
 ./desktop/games.nix
 ./desktop/lightdm.nix
-./desktop/stylix.nix
+./desktop/otd.nix
+#./desktop/stylixx.nix
+./desktop/xfce.nix
+./network/bluetooth.nix
 ./network/openssh.nix
 ./network/zerotier.nix
-./network/bluetooth.nix
-./services/sound.nix
 ./services/clamav.nix
+./services/nix-helper.nix
 ./services/plymouth.nix
 ./services/printers.nix
-./services/nix-helper.nix
+./services/sound.nix
 ./services/virtualisation.nix
 ];
 

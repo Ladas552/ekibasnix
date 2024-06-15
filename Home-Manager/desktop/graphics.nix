@@ -13,6 +13,7 @@
       fish.enable = false;
       xfce.enable = true;
       vesktop.enable = true;
+      gtk.enable = true;
     };
     fonts = {
       serif = config.stylix.fonts.monospace;

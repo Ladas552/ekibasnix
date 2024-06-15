@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-home = {
   programs.ranger = {
     enable = true;
     extraConfig = ''
@@ -678,6 +677,5 @@ home = {
           tmap <ESC> taskview_close
           copytmap <ESC> q Q w <C-c>   
           '';
-      };
 };
 }

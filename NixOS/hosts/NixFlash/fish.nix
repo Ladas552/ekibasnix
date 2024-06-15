@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ... }:
 
 {
-home = {
   programs.fish = {
     enable = true;
     plugins = with pkgs.fishPlugins; [
@@ -24,6 +23,5 @@ home = {
       copypaste = ''${pkgs.wgetpaste}/bin/wgetpaste'';
       cmatrix = ''${pkgs.unimatrix}/bin/unimatrix -f -s 95'';
     };
-  };
   };
 }

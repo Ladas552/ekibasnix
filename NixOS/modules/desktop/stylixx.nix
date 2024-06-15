@@ -3,10 +3,10 @@
 
 {
   options = {
-    stylix.enable = lib.mkEnableOption "enable stylix";
+    stylixx.enable = lib.mkEnableOption "enable stylixx";
   };
 
-  config = lib.mkIf config.stylix.enable {
+  config = lib.mkIf config.stylixx.enable {
     stylix = {
       image = ./wallpapers/Stars.png;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
@@ -20,8 +20,14 @@
         xfce.enable = true;
       };
       fonts = {
-        serif = config.stylix.fonts.monospace;
-        sansSerif = config.stylix.fonts.monospace;
+        serif = {
+          package = pkgs.jetbrains-mono;
+          name = "JetBrainsMono";
+        };
+        sansSerif = {
+          package = pkgs.jetbrains-mono;
+          name = "JetBrainsMono";
+        };
         emoji = {
           package = pkgs.noto-fonts-emoji;
           name = "Noto Color Emoji";

@@ -1,27 +1,28 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, modulesPath, lib, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
     ./../../modules/modules.nix
     ./apps.nix
+    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
     ];
 
 #modules
-xfce.enable = true;
+bluetooth.enable = true;
 fonts.enable = true;
 lightdm.enable = true;
 openssh.enable = true;
-zerotier.enable = true;
-bluetooth.enable = true;
 printers.enable = true;
-stylix.enable = true;
+xfce.enable = true;
+zerotier.enable = true;
 
 # Bootloader.
   boot.loader = {
   systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
+  nixpkgs.hostPlatform = "x86_64-linux";
   networking.hostName = "NixIso"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

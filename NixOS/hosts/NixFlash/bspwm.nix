@@ -1,7 +1,6 @@
 { config, pkgs, inputs, ...}:
 
 {
- home = {
  xsession.windowManager.bspwm = 
   {
     enable = true;
@@ -224,6 +223,5 @@ alt + shift + {Left,Down,Up,Right}
   bspc node -v {-20 0,0 20,0 -20,20 0}
 #
 #    '';
-  };
   };
 }

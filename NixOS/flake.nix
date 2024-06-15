@@ -38,7 +38,7 @@
         modules = [
           ./hosts/NixFlash/configuration.nix
             inputs.nixvim.nixosModules.nixvim
-            inputs.stylix.nixosModules.stylix
+ #           inputs.stylix.nixosModules.stylix
             inputs.home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
