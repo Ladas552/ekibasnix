@@ -31,6 +31,11 @@
           xfce4-taskmanager
           xfce4-terminal 
       ];
+      systemPackages = with pkgs.xfce; [
+          xfce4-xkb-plugin
+          xfce4-timer-plugin
+          xfce4-weather-plugin
+      ];
     };
   };
 }

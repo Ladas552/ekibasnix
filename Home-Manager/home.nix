@@ -1,4 +1,4 @@
-{config, pkgs, inputs, ... }:
+{config, pkgs, inputs, pkgs-stable, ... }:
 
 {
 # Home Manager needs a bit of information about you and the paths it should
@@ -22,13 +22,13 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 # Standalone Packages for user
     home.packages = with pkgs; [
+    pkgs-stable.floorp
     hello
       cowsay
       vesktop
       keepassxc
       libqalculate
       manix
-      floorp
       lshw
       niri
       libreoffice-fresh
