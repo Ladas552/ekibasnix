@@ -44,6 +44,7 @@
       numlockx
       pamixer
       texlive.combined.scheme-small
+      typst
       winePackages.stagingFull
       winePackages.fonts
       winetricks

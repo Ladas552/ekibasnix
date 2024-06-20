@@ -17,6 +17,7 @@
           bashls.enable = true;
           lua-ls.enable = true;
           nil_ls.enable = true;
+          typst-lsp.enable = true;
         };
       };
 
@@ -65,12 +66,30 @@
             "zathurarc"
         ];
       };
+
       image = {
         enable = true;
       };
+
+      typst-vim = {
+        enable = true;
+        settings = {
+          auto_close_toc = true;
+          pdf_viewer = "zathura";
+        };
+      };
+
       auto-save = {
         enable = true;
       };
+
+      telescope = {
+        enable = true;
+        settings.defaults = {
+          path_display = "truncate "; 
+        };
+      };
+
       cmp = {
         enable = true;
         settings = {
@@ -103,7 +122,38 @@
           };
         };
       };
+
       cmp-path.enable = true;
+      
+      dashboard = {
+        enable = true;
+        settings = {
+          theme = "doom";
+          shortcut_type = "number";
+          config = {
+          header = [
+            ''                                                     ''          
+            ''  |                 |               ___|  ___| ___ \ ''
+            ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
+            ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
+            '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
+            ''                                                     ''        
+          ];
+          center = [
+            { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
+            { action = "Telescope find_files"; desc = " Find files";   icon = " ";  key = "F";}
+            { action = "ene | startinsert";    desc = " New file";     icon = " ";  key = "N";}
+            { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
+            { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
+            { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
+            { action = "Lazy";                 desc = " Lazy";         icon = "󰒲 ";  key = "L";}
+            { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
+          ];
+          footer = ["Just Do Something Already!"];
+          };
+        };
+      };
+
     };
   };
 }

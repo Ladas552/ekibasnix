@@ -2,6 +2,7 @@
 {
 #Themes
   stylix = {
+    enable = true;
     image = ./wallpapers/Bones.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     autoEnable = true;
