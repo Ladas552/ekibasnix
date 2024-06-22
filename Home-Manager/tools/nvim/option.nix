@@ -36,6 +36,8 @@
       breakindent = true;
 #Go to new directory
       autochdir = true;
+#Clipboard
+      clipboard.providers.xclip.enable = true;
     };
   };
 }

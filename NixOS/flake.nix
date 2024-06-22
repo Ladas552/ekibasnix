@@ -13,7 +13,6 @@
 # ColorScheme
     stylix.url = "github:danth/stylix";
 
-
 # Games
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use

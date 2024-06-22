@@ -31,6 +31,9 @@
         mgba
 # doesn't work       retroarchFull
 # too complex and need a special controller      mame
+
+# osu
+        osu-lazer-bin
     ];
   };
 }

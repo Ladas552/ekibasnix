@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 {
   programs.nixvim = {
+    extraPlugins = [
+    pkgs.vimPlugins."nvim-web-devicons"
+    pkgs.vimPlugins."lspkind-nvim"
+    ];
     plugins = {
 #  neorg = {
 #    enable = true;
@@ -20,6 +24,8 @@
           typst-lsp.enable = true;
         };
       };
+      #lspkind.enable = true;
+      #lspkind.cmp.enable = false;
 
       oil = {
         enable = true;
@@ -79,6 +85,42 @@
         };
       };
 
+      arrow = {
+        enable = true;
+        settings = {
+          show_icons = true;
+          full_path_list = [
+            "update_stuff"
+          ];
+          save_path = ''
+            function()
+            return vim.fn.stdpath("cache") .. "/arrow"
+            end
+            '';
+          global_bookmarks = true;
+          always_show_path = true;
+          separate_by_branch = true;
+          buffer_leader_key = "m";
+        };
+      };
+
+      barbar = {
+        enable = true;
+        settings = {
+          animation = false;
+          auto_hide = 1;
+        };
+      };
+
+      ccc = {
+        enable = true;
+        settings = {
+          highlighter = {
+            auto_enable = true;
+          };
+        };
+      };
+
       auto-save = {
         enable = true;
       };
@@ -93,6 +135,12 @@
       cmp = {
         enable = true;
         settings = {
+          completion.completeopt = "menu,menuone,preview,noselect";
+          snippet.expand = ''
+            function(args)
+            require("luasnip").lsp_expand(args.body)
+            end,
+            '';
           sources = {
             __raw = ''
               cmp.config.sources({
@@ -120,10 +168,23 @@
                   })
             '';
           };
+          formatting = {
+            format = ''
+              require("lspkind").cmp_format({
+                  maxwidth = 50,
+                  ellipsis_char = "...",
+                  mode = "symbol",
+                  symbol_map = { Copilot = "" },
+                  }),
+            '';
+          };
         };
       };
 
       cmp-path.enable = true;
+      cmp-buffer.enable = true;
+      cmp_luasnip.enable = true;
+      copilot-cmp.enable = true;
       
       dashboard = {
         enable = true;
