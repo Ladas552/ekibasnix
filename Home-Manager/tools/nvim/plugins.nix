@@ -3,18 +3,15 @@
   programs.nixvim = {
     extraPlugins = [
     pkgs.vimPlugins."nvim-web-devicons"
+    pkgs.vimPlugins."gitsigns-nvim"
     pkgs.vimPlugins."lspkind-nvim"
+    pkgs.vimPlugins."overseer-nvim"
     ];
     plugins = {
 #  neorg = {
 #    enable = true;
 #  };
-
-      wtf = {
-        enable = true;
-        context = true;
-      };
-
+#LSP
       lsp = {
         enable = true;
         servers = {
@@ -24,65 +21,11 @@
           typst-lsp.enable = true;
         };
       };
-      #lspkind.enable = true;
-      #lspkind.cmp.enable = false;
 
-      oil = {
-        enable = true;
-        settings = {
-          delete_to_trash = true;
-          view_options = {
-            show_hidden = true;
-          };
-        };
-      };
-
+      luasnip.enable = true;
+#UI
       which-key = {
         enable = true;
-      };
-
-      nvim-autopairs = {
-        enable = true;
-        settings = {
-          check_ts = true;
-        };
-      };
-
-      treesitter = {
-        enable = true;
-        indent = true;
-        folding = true;
-        nixvimInjections = true;
-        ensureInstalled = [
-          "bash"
-            "fish"
-            "gitignore"
-            "html"
-            "latex"
-            "lua"
-            "make"
-            "markdown"
-            "markdown_inline"
-            "kotlin"
-            "nix"
-            "python"
-            "vim"
-            "rust"
-            "yaml"
-            "zathurarc"
-        ];
-      };
-
-      image = {
-        enable = true;
-      };
-
-      typst-vim = {
-        enable = true;
-        settings = {
-          auto_close_toc = true;
-          pdf_viewer = "zathura";
-        };
       };
 
       arrow = {
@@ -121,10 +64,6 @@
         };
       };
 
-      auto-save = {
-        enable = true;
-      };
-
       telescope = {
         enable = true;
         settings.defaults = {
@@ -132,6 +71,35 @@
         };
       };
 
+      dashboard = {
+        enable = true;
+        settings = {
+          theme = "doom";
+          shortcut_type = "number";
+          config = {
+          header = [
+            ''                                                     ''          
+            ''  |                 |               ___|  ___| ___ \ ''
+            ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
+            ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
+            '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
+            ''                                                     ''        
+          ];
+          center = [
+            { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
+            { action = "Telescope find_files"; desc = " Find files";   icon = " ";  key = "F";}
+            { action = "ene | startinsert";    desc = " New file";     icon = " ";  key = "N";}
+            { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
+            { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
+            { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
+            { action = "Lazy";                 desc = " Lazy";         icon = "󰒲 ";  key = "L";}
+            { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
+          ];
+          footer = ["Just Do Something Already!"];
+          };
+        };
+      };
+#cmp
       cmp = {
         enable = true;
         settings = {
@@ -185,34 +153,75 @@
       cmp-buffer.enable = true;
       cmp_luasnip.enable = true;
       copilot-cmp.enable = true;
-      
-      dashboard = {
+#Workflow
+      wtf = {
+        enable = true;
+        context = true;
+      };
+
+
+      oil = {
         enable = true;
         settings = {
-          theme = "doom";
-          shortcut_type = "number";
-          config = {
-          header = [
-            ''                                                     ''          
-            ''  |                 |               ___|  ___| ___ \ ''
-            ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
-            ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
-            '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
-            ''                                                     ''        
-          ];
-          center = [
-            { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
-            { action = "Telescope find_files"; desc = " Find files";   icon = " ";  key = "F";}
-            { action = "ene | startinsert";    desc = " New file";     icon = " ";  key = "N";}
-            { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
-            { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
-            { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
-            { action = "Lazy";                 desc = " Lazy";         icon = "󰒲 ";  key = "L";}
-            { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
-          ];
-          footer = ["Just Do Something Already!"];
+          delete_to_trash = true;
+          view_options = {
+            show_hidden = true;
           };
         };
+      };
+
+
+      nvim-autopairs = {
+        enable = true;
+        settings = {
+          check_ts = true;
+        };
+      };
+
+      treesitter = {
+        enable = true;
+        indent = true;
+        folding = true;
+        nixvimInjections = true;
+        ensureInstalled = [
+          "bash"
+            "fish"
+            "gitignore"
+            "html"
+            "latex"
+            "lua"
+            "make"
+            "markdown"
+            "markdown_inline"
+            "kotlin"
+            "nix"
+            "python"
+            "vim"
+            "rust"
+            "yaml"
+            "zathurarc"
+        ];
+      };
+
+      image = {
+        enable = true;
+      };
+
+      typst-vim = {
+        enable = true;
+        settings = {
+          auto_close_toc = true;
+          pdf_viewer = "zathura";
+        };
+      };
+
+
+      neogit = {
+        enable = true;
+      };
+
+      auto-save = {
+        enable = true;
       };
 
     };
