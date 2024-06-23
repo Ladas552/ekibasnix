@@ -23,6 +23,7 @@
       };
 
       luasnip.enable = true;
+      friendly-snippets.enable = true;
 #UI
       which-key = {
         enable = true;
@@ -92,7 +93,6 @@
             { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
             { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
             { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
-            { action = "Lazy";                 desc = " Lazy";         icon = "󰒲 ";  key = "L";}
             { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
           ];
           footer = ["Just Do Something Already!"];
@@ -153,6 +153,23 @@
       cmp-buffer.enable = true;
       cmp_luasnip.enable = true;
       copilot-cmp.enable = true;
+#AI
+      copilot-lua = {
+        enable = true;
+        filetypes = {
+          javascript = true;
+          typescript = true;
+          rust = true;
+          python = true;
+          lua = true;
+          nix = true;
+          "*" = false;
+        };
+      };
+
+      codeium-nvim = {
+        enable = true;
+      };
 #Workflow
       wtf = {
         enable = true;
@@ -223,7 +240,6 @@
       auto-save = {
         enable = true;
       };
-
     };
   };
 }
