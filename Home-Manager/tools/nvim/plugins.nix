@@ -6,7 +6,16 @@
     pkgs.vimPlugins."gitsigns-nvim"
     pkgs.vimPlugins."lspkind-nvim"
     pkgs.vimPlugins."overseer-nvim"
-    ];
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "markview.nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "OXY2DEV";
+        repo = "markview.nvim";
+        rev = "e165c46b4c198c1a67669ccbd90d2c2488da849a";
+        sha256 = "02flz6055xz94m78a5gaa1k4f6npffm7idr4wgjyas3lplmvr9ab";
+      };
+    })
+  ];
     plugins = {
 #  neorg = {
 #    enable = true;
@@ -118,7 +127,7 @@
                   { name = "path" }, -- file system paths
                   { name = "neorg" },
                   { name = "vimtex" }, 
-                  { name = "codeium" },
+               -- { name = "codeium" },
                   { name = "copilot" },
                   }),
             '';
@@ -167,15 +176,14 @@
         };
       };
 
-      codeium-nvim = {
-        enable = true;
-      };
+      # codeium-nvim = {
+      #   enable = true;
+      # };
 #Workflow
       wtf = {
         enable = true;
         context = true;
       };
-
 
       oil = {
         enable = true;
@@ -187,7 +195,6 @@
         };
       };
 
-
       nvim-autopairs = {
         enable = true;
         settings = {
@@ -195,6 +202,8 @@
         };
       };
 
+      nix.enable = true;
+      
       treesitter = {
         enable = true;
         indent = true;
@@ -228,7 +237,7 @@
         enable = true;
         settings = {
           auto_close_toc = true;
-          pdf_viewer = "zathura";
+          pdf_viewer = "floorp";
         };
       };
 

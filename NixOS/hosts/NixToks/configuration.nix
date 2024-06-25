@@ -155,7 +155,8 @@ virtualisation.enable = true;
 # Open ports in the firewall.
     networking.firewall.allowedTCPPorts = [
       22
-        22067
+      22067
+ #     23
     ];
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.

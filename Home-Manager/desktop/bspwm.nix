@@ -21,9 +21,9 @@
       "TelegramDesktop" = {
         state = "floating";
       };
-      "Zathura" = {
-        state = "floating";
-      };
+      # "Zathura" = {
+      #   state = "floating";
+      # };
       "Peek" = {
         state = "floating";
       };
