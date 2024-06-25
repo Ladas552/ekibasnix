@@ -13,6 +13,7 @@
         repo = "markview.nvim";
         rev = "e165c46b4c198c1a67669ccbd90d2c2488da849a";
         sha256 = "02flz6055xz94m78a5gaa1k4f6npffm7idr4wgjyas3lplmvr9ab";
+        # nix run nixpkgs#nix-prefetch-git https://github.com/OXY2DEV/markview.nvim.git
       };
     })
   ];
