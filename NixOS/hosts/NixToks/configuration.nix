@@ -156,7 +156,7 @@ virtualisation.enable = true;
     networking.firewall.allowedTCPPorts = [
       22
       22067
- #     23
+      9993
     ];
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.
