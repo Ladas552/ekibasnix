@@ -11,4 +11,4 @@
 3. Write comments for not forgetting functions and what I did even config
 4. Declare much more packages
 5. Declare Nix with Neorg tangle
-6. Make secure SSH connection to my phone to edit on the go
+6. ~Make secure SSH connection to my phone to edit on the go~
