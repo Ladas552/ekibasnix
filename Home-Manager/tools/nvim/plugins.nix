@@ -28,7 +28,6 @@
           bashls.enable = true;
           lua-ls.enable = true;
           nil_ls.enable = true;
-          typst-lsp.enable = true;
         };
       };
 
@@ -46,7 +45,7 @@
           full_path_list = [
             "update_stuff"
           ];
-          save_path = ''
+          save_path = /*lua*/ ''
             function()
             return vim.fn.stdpath("cache") .. "/arrow"
             end
@@ -114,13 +113,13 @@
         enable = true;
         settings = {
           completion.completeopt = "menu,menuone,preview,noselect";
-          snippet.expand = ''
+          snippet.expand = /*lua*/ ''
             function(args)
             require("luasnip").lsp_expand(args.body)
             end,
             '';
           sources = {
-            __raw = ''
+            __raw = /*lua*/ ''
               cmp.config.sources({
                   { name = "nvim_lsp" },
                   { name = "luasnip" }, -- snippets
@@ -128,13 +127,16 @@
                   { name = "path" }, -- file system paths
                   { name = "neorg" },
                   { name = "vimtex" }, 
-               -- { name = "codeium" },
-                  { name = "copilot" },
+              --  { name = "codeium" },
+                  { name = "copilot" },    
+                  { name = "bashls" },
+                  { name = "lua_ls" },
+                  { name = "nil_ls" },
                   }),
             '';
           };
           mapping = {
-            __raw = ''
+            __raw = /*lua*/ ''
               cmp.mapping.preset.insert({
                   ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
                   ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
@@ -147,7 +149,7 @@
             '';
           };
           formatting = {
-            format = ''
+            format = /*lua*/ ''
               require("lspkind").cmp_format({
                   maxwidth = 50,
                   ellipsis_char = "...",
@@ -250,7 +252,15 @@
       auto-save = {
         enable = true;
       };
-    };
+      # Guffy
+      presence-nvim = {
+        enable = true;
+        blacklist = [
+          ".norg"
+          ".txt"
+        ];
+      };
+      };
   };
 }
 

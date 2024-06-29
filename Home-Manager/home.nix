@@ -9,10 +9,10 @@
       inputs.neorg-overlay.overlays.default
     ];
   };
-
+    
   imports = [
     ./desktop/graphics.nix
-      ./desktop/bspwm.nix
+    ./desktop/bspwm.nix
       ./tools/apps.nix
   ];
 # Me
@@ -22,7 +22,8 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 # Standalone Packages for user
     home.packages = with pkgs; [
-    pkgs-stable.floorp
+      #pkgs-stable. 
+      floorp
     hello
       cowsay
       vesktop

@@ -64,7 +64,7 @@
 #    keybindings = {
 #    "super + t" = "kitty";
 #    };
-    extraConfig = ''
+    extraConfig = /*sxhkdrc*/ ''
 #
 # wm independent hotkeys
 #

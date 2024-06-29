@@ -2,7 +2,7 @@
 {
   programs.nixvim = {
     extraPlugins = [pkgs.vimPlugins."neorg"];
-    extraConfigLua = ''
+    extraConfigLua = /*lua*/''
       vim.wo.foldlevel = 99
       vim.wo.conceallevel = 2
       require("nvim-treesitter.configs").setup {
