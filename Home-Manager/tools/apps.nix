@@ -14,9 +14,6 @@
     zathura = {
       enable = true;
     };
-    ncmpcpp = {
-      enable = true;
-    };
     btop = {
       enable = true;
     };

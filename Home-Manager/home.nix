@@ -55,6 +55,7 @@
       qbittorrent
       candy-icons
       catppuccin-cursors
+      mpc-cli
       ];
   nixpkgs.config.allowUnfree = true;
 #  home.file = {
