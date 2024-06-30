@@ -9,6 +9,7 @@
   ./ranger.nix
   ./term.nix
   ./qutebrowser.nix
+  ./mpd.nix
   ];
   programs = {
     zathura = {
