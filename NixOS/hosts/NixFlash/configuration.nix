@@ -4,8 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
     ./../../modules/modules.nix
-    ./apps.nix
-    "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
+    # "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
     ];
 
 #modules
@@ -70,11 +69,11 @@ zerotier.enable = true;
 # Experiment stuff
 # Nvidia
 # Enable OpenGL
-    hardware.opengl = {
-      enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
-    };
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+};
+
 #
 # Load nvidia driver for Xorg and Wayland
 
@@ -86,6 +85,7 @@ zerotier.enable = true;
       isNormalUser = true;
       description = "Fixnix";
       extraGroups = [ "networkmanager" "wheel"];
+      initialPassword = "";
 #packages = with pkgs; [
 # firefox
 #  thunderbird

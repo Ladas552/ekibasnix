@@ -5,7 +5,7 @@
 imports = [
 ./defaultc.nix
 ./desktop/fonts.nix
-./desktop/games.nix
+#./desktop/games.nix
 ./desktop/lightdm.nix
 ./desktop/otd.nix
 #./desktop/stylixx.nix

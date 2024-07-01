@@ -102,12 +102,13 @@ virtualisation.enable = true;
     };
 
 # Nvidia
-# Enable OpenGL
-    hardware.opengl = {
-      enable = true;
-      driSupport32Bit = true;
-    };
-#
+# Enable OpenGL and hardware accelerated graphics drivers
+
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+};
+
 # Load nvidia driver for Xorg and Wayland
     services.xserver.videoDrivers = ["nvidia"]; # or "nvidiaLegacy470 etc.
       hardware.nvidia = {
