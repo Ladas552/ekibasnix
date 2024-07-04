@@ -7,6 +7,7 @@
   nixpkgs = {
     overlays =  [
       inputs.neorg-overlay.overlays.default
+      inputs.emacs-overlay.overlays.default
     ];
   };
     
@@ -24,7 +25,7 @@
     home.packages = with pkgs; [
       #pkgs-stable. 
       floorp
-    hello
+      hello
       cowsay
       vesktop
       keepassxc
@@ -46,10 +47,6 @@
       pamixer
       texlive.combined.scheme-small
       typst
-      winePackages.stagingFull
-      winePackages.fonts
-      winetricks
-      bottles
       xclip
       peek
       qbittorrent

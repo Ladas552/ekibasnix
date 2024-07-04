@@ -32,6 +32,7 @@
       df = ''${pkgs.duf}/bin/duf'';
       copypaste = ''${pkgs.wgetpaste}/bin/wgetpaste'';
       cmatrix = ''${pkgs.unimatrix}/bin/unimatrix -f -s 95'';
+      ls = ''ls --hyperlink=auto'';
     };
   };
 }

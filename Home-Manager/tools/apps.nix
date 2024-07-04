@@ -10,6 +10,7 @@
   ./term.nix
   ./qutebrowser.nix
   ./mpd.nix
+  ./emacs.nix
   ];
   programs = {
     zathura = {

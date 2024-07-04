@@ -25,6 +25,9 @@
         prismlauncher
         xclicker
         bottles
+        winePackages.stagingFull
+        winePackages.fonts
+        winetricks
         steam-run
 # Emulators
         duckstation
