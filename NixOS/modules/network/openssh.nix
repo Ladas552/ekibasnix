@@ -7,7 +7,7 @@
 
   config = lib.mkIf config.openssh.enable {
 
-# SSH connections
+    # SSH connections
     services.openssh = {
       enable = true;
       ports = [ 22 ];

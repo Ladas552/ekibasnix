@@ -14,10 +14,10 @@
           greeters.slick.enable = true;
           greeters.slick.theme.name = "Zukitre-dark";
         };
-# Numlock on start because I use numpad
+        # Numlock on start because I use numpad
         displayManager.setupCommands = ''
           ${pkgs.numlockx}/bin/numlockx on
-          '';
+        '';
       };
     };
   };

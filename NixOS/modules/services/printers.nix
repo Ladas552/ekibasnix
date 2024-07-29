@@ -5,7 +5,7 @@
   };
 
   config = lib.mkIf config.printers.enable {
-# Enable CUPS to print documents.
+    # Enable CUPS to print documents.
     services.printing.enable = true;
   };
 }

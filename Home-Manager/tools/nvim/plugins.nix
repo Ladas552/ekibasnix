@@ -2,26 +2,26 @@
 {
   programs.nixvim = {
     extraPlugins = [
-    pkgs.vimPlugins."nvim-web-devicons"
-    pkgs.vimPlugins."gitsigns-nvim"
-    pkgs.vimPlugins."lspkind-nvim"
-    pkgs.vimPlugins."overseer-nvim"
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "markview.nvim";
-      src = pkgs.fetchFromGitHub {
-        owner = "OXY2DEV";
-        repo = "markview.nvim";
-        rev = "e165c46b4c198c1a67669ccbd90d2c2488da849a";
-        sha256 = "02flz6055xz94m78a5gaa1k4f6npffm7idr4wgjyas3lplmvr9ab";
-        # nix run nixpkgs#nix-prefetch-git https://github.com/OXY2DEV/markview.nvim.git
-      };
-    })
-  ];
+      pkgs.vimPlugins."nvim-web-devicons"
+      pkgs.vimPlugins."gitsigns-nvim"
+      pkgs.vimPlugins."lspkind-nvim"
+      pkgs.vimPlugins."overseer-nvim"
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "markview.nvim";
+        src = pkgs.fetchFromGitHub {
+          owner = "OXY2DEV";
+          repo = "markview.nvim";
+          rev = "e165c46b4c198c1a67669ccbd90d2c2488da849a";
+          sha256 = "02flz6055xz94m78a5gaa1k4f6npffm7idr4wgjyas3lplmvr9ab";
+          # nix run nixpkgs#nix-prefetch-git https://github.com/OXY2DEV/markview.nvim.git
+        };
+      })
+    ];
     plugins = {
-#  neorg = {
-#    enable = true;
-#  };
-#LSP
+      #  neorg = {
+      #    enable = true;
+      #  };
+      #LSP
       lsp = {
         enable = true;
         servers = {
@@ -33,7 +33,7 @@
 
       luasnip.enable = true;
       friendly-snippets.enable = true;
-#UI
+      #UI
       which-key = {
         enable = true;
       };
@@ -47,115 +47,115 @@
           ];
           save_path = /*lua*/ ''
             function()
-            return vim.fn.stdpath("cache") .. "/arrow"
+              return vim.fn.stdpath("cache") .. "/arrow"
             end
             '';
-          global_bookmarks = true;
-          always_show_path = true;
-          separate_by_branch = true;
-          buffer_leader_key = "m";
-        };
-      };
+            global_bookmarks = true;
+            always_show_path = true;
+            separate_by_branch = true;
+            buffer_leader_key = "m";
+            };
+            };
 
-      barbar = {
-        enable = true;
-        settings = {
-          animation = false;
-          auto_hide = 1;
-        };
-      };
+            barbar = {
+            enable = true;
+            settings = {
+            animation = false;
+            auto_hide = 1;
+            };
+            };
 
-      ccc = {
-        enable = true;
-        settings = {
-          highlighter = {
+            ccc = {
+            enable = true;
+            settings = {
+            highlighter = {
             auto_enable = true;
-          };
-        };
-      };
+            };
+            };
+            };
 
-      telescope = {
-        enable = true;
-        settings.defaults = {
-          path_display = "truncate "; 
-        };
-      };
+            telescope = {
+            enable = true;
+            settings.defaults = {
+            path_display = "truncate "; 
+            };
+            };
 
-      dashboard = {
-        enable = true;
-        settings = {
-          theme = "doom";
-          shortcut_type = "number";
-          config = {
-          header = [
+            dashboard = {
+            enable = true;
+            settings = {
+            theme = "doom";
+            shortcut_type = "number";
+            config = {
+            header = [
             ''                                                     ''          
             ''  |                 |               ___|  ___| ___ \ ''
             ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
             ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
             '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
             ''                                                     ''        
-          ];
-          center = [
-            { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
-            { action = "Telescope find_files"; desc = " Find files";   icon = " ";  key = "F";}
-            { action = "ene | startinsert";    desc = " New file";     icon = " ";  key = "N";}
-            { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
-            { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
-            { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
-            { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
-          ];
-          footer = ["Just Do Something Already!"];
-          };
-        };
-      };
-#cmp
-      cmp = {
-        enable = true;
-        settings = {
-          completion.completeopt = "menu,menuone,preview,noselect";
-          snippet.expand = /*lua*/ ''
+            ];
+            center = [
+              { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
+              { action = "Telescope find_files"; desc = " Find files";   icon = " ";  key = "F";}
+              { action = "ene | startinsert";    desc = " New file";     icon = " ";  key = "N";}
+              { action = "Neorg workspace life"; desc = " Neorg Life";   icon = "󰠮 ";  key = "E";}
+              { action = "Neorg workspace work"; desc = " Neorg Work";   icon = " ";  key = "W";}
+              { action = "Neorg journal today";  desc = " Neorg Journal";icon = "󰛓 ";  key = "J";}
+              { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
+            ];
+            footer = ["Just Do Something Already!"];
+            };
+            };
+            };
+            #cmp
+            cmp = {
+            enable = true;
+            settings = {
+            completion.completeopt = "menu,menuone,preview,noselect";
+            snippet.expand = /*lua*/ ''
             function(args)
-            require("luasnip").lsp_expand(args.body)
+              require("luasnip").lsp_expand(args.body)
             end,
             '';
-          sources = {
+            sources = {
             __raw = /*lua*/ ''
-              cmp.config.sources({
-                  { name = "nvim_lsp" },
-                  { name = "luasnip" }, -- snippets
-                  { name = "buffer" }, -- text within current buffer
-                  { name = "path" }, -- file system paths
-                  { name = "neorg" },
-                  { name = "vimtex" }, 
+            cmp.config.sources({
+              { name = "nvim_lsp" },
+              { name = "luasnip" }, -- snippets
+              { name = "buffer" }, -- text within current buffer
+              { name = "path" }, -- file system paths
+              { name = "neorg" },
+              { name = "vimtex" }, 
               --  { name = "codeium" },
-                  { name = "copilot" },    
-                  { name = "bashls" },
-                  { name = "lua_ls" },
-                  { name = "nil_ls" },
-                  }),
+              { name = "copilot" },    
+              { name = "bashls" },
+              { name = "lua_ls" },
+              { name = "nil_ls" },
+            }),
             '';
-          };
-          mapping = {
+            };
+            mapping = {
             __raw = /*lua*/ ''
-              cmp.mapping.preset.insert({
-                  ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-                  ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
-                  ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-                  ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                  ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-                  ["<ESC>"] = cmp.mapping.abort(), -- close completion window
-                  ["<CR>"] = cmp.mapping.confirm({ select = false }),
-                  })
+            cmp.mapping.preset.insert({
+              ["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
+              ["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
+              ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+              ["<C-f>"] = cmp.mapping.scroll_docs(4),
+              ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+              ["<ESC>"] = cmp.mapping.abort(), -- close completion window
+              ["<CR>"] = cmp.mapping.confirm({ select = false }),
+            })
             '';
-          };
-          formatting = {
+            };
+            formatting = {
             format = /*lua*/ ''
-              require("lspkind").cmp_format({
-                  maxwidth = 50,
-                  ellipsis_char = "...",
-                  mode = "symbol",
-                  symbol_map = { Copilot = "" },
-                  }),
+            require("lspkind").cmp_format({
+              maxwidth = 50,
+              ellipsis_char = "...",
+              mode = "symbol",
+              symbol_map = { Copilot = "" },
+            }),
             '';
           };
         };
@@ -165,7 +165,7 @@
       cmp-buffer.enable = true;
       cmp_luasnip.enable = true;
       copilot-cmp.enable = true;
-#AI
+      #AI
       copilot-lua = {
         enable = true;
         filetypes = {
@@ -182,7 +182,7 @@
       # codeium-nvim = {
       #   enable = true;
       # };
-#Workflow
+      #Workflow
       wtf = {
         enable = true;
         context = true;
@@ -206,7 +206,7 @@
       };
 
       nix.enable = true;
-      
+
       treesitter = {
         enable = true;
         indent = true;
@@ -214,21 +214,21 @@
         nixvimInjections = true;
         ensureInstalled = [
           "bash"
-            "fish"
-            "gitignore"
-            "html"
-            "latex"
-            "lua"
-            "make"
-            "markdown"
-            "markdown_inline"
-            "kotlin"
-            "nix"
-            "python"
-            "vim"
-            "rust"
-            "yaml"
-            "zathurarc"
+          "fish"
+          "gitignore"
+          "html"
+          "latex"
+          "lua"
+          "make"
+          "markdown"
+          "markdown_inline"
+          "kotlin"
+          "nix"
+          "python"
+          "vim"
+          "rust"
+          "yaml"
+          "zathurarc"
         ];
       };
 
@@ -260,7 +260,7 @@
           ".txt"
         ];
       };
-      };
+    };
   };
 }
 

@@ -8,10 +8,10 @@
   config = lib.mkIf config.fonts.enable {
     fonts.packages = with pkgs; [
       noto-fonts
-        noto-fonts-cjk
-        noto-fonts-emoji
-        jetbrains-mono
-        (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      noto-fonts-cjk
+      noto-fonts-emoji
+      jetbrains-mono
+      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
   };
 }

@@ -2,15 +2,15 @@
 
 {
   imports = [
-  ./fish.nix
-  ./git.nix
-  ./mpv.nix
-  ./nixvim.nix
-  ./ranger.nix
-  ./term.nix
-  ./qutebrowser.nix
-  ./mpd.nix
-  ./emacs.nix
+    ./fish.nix
+    ./git.nix
+    ./mpv.nix
+    ./nixvim.nix
+    ./ranger.nix
+    ./term.nix
+    ./qutebrowser.nix
+    ./mpd.nix
+    #   ./emacs.nix
   ];
   programs = {
     zathura = {

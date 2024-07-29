@@ -10,15 +10,15 @@
     services.xserver.libinput = {
       enable = true;
       mouse = {
-      scrollMethod = "button";
-      sctrollButton = "3";
+        scrollMethod = "button";
+        sctrollButton = "3";
       };
       touchpad = {
-      tapping = true;
-      naturalScrolling = true;
-      scrollMethod = "edge";
-      touchpad.disableWhileTypin = false;
-      clickMethod = "clickfinger";
+        tapping = true;
+        naturalScrolling = true;
+        scrollMethod = "edge";
+        touchpad.disableWhileTypin = false;
+        clickMethod = "clickfinger";
       };
     };
   };
