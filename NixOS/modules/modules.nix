@@ -19,10 +19,12 @@
     ./services/printers.nix
     ./services/sound.nix
     ./services/virtualisation.nix
+    ./secrets/sops.nix
   ];
 
   defaultc.enable = lib.mkDefault true;
   nix-helper.enable = lib.mkDefault true;
   fonts.enable = lib.mkDefault true;
   sounds.enable = lib.mkDefault true;
+  secrets.enable = lib.mkDefault true;
 }

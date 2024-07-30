@@ -73,6 +73,7 @@
       open-vm-tools
       libvirt-glib
       niri
+      sops
     ];
   };
   # Configure keymap in X11
@@ -131,6 +132,7 @@
     isNormalUser = true;
     description = "Ladas552";
     extraGroups = [ "networkmanager" "wheel" "libvirtd"];
+    hashedPasswordFile = config.sops.secrets."mystuff/my_password".path;
     #packages = with pkgs; [
     # firefox
     #  thunderbird

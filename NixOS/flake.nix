@@ -5,9 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Secrets
-    agenix.url = "github:ryantm/agenix";
-    agenix.inputs.nixpkgs.follows = "nixpkgs";
-    agenix.inputs.darwin.follows = "";
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     # HM module
     #     home-manager.url = "github:nix-community/home-manager";
     #     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +21,7 @@
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
   };
 
-  outputs = { self, nixpkgs, aagl, agenix } @inputs: let
+  outputs = { self, nixpkgs, aagl, sops-nix} @inputs: let
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
@@ -32,7 +31,7 @@
         modules = [
           ./hosts/NixToks/configuration.nix
           inputs.aagl.nixosModules.default
-          inputs.agenix.nixosModules.default
+          inputs.sops-nix.nixosModules.sops
         ];
       };
 

@@ -8,7 +8,6 @@
   config = lib.mkIf config.games.enable {
 
     # Genshin Imapct
-    programs.anime-game-launcher.enable = true;
     programs.sleepy-launcher.enable = true;
     # Steam
     programs.steam = {
