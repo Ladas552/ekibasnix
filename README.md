@@ -7,7 +7,7 @@
 
 # What are the plans
 1. ~Migrate my NixOS to flake~
-2. Make Nix Secrets to not doxx myself
+2. ~Make Nix Secrets to not doxx myself~
 3. Write comments for not forgetting functions and what I did even config
 4. Declare much more packages
 5. Declare Nix with Neorg tangle
