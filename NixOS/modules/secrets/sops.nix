@@ -14,10 +14,10 @@
     sops.age.sshKeyPaths = [ "/home/ladas552/.ssh/NixToks" ];
     #sops.age.keyFile = "/home/ladas552/.config/sops/age/keys.txt";
 
-    sops.secrets."mystuff/my_password".neededForUsers = true;
-    sops.secrets."mystuff/my_password" = {};
+    sops.secrets."mystuff/host_pwd".neededForUsers = true;
+    sops.secrets."mystuff/host_pwd" = {};
 
-    sops.secrets."mystuff/my_zero".neededForUsers = true;
-    sops.secrets."mystuff/my_zero" = {};
+    sops.secrets."mystuff/zero_net_id".neededForUsers = true;
+    sops.secrets."mystuff/zero_net_id" = {};
   };
 }

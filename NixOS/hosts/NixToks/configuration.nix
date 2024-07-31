@@ -132,7 +132,7 @@
     isNormalUser = true;
     description = "Ladas552";
     extraGroups = [ "networkmanager" "wheel" "libvirtd"];
-    hashedPasswordFile = config.sops.secrets."mystuff/my_password".path;
+    hashedPasswordFile = config.sops.secrets."mystuff/host_pwd".path;
     #packages = with pkgs; [
     # firefox
     #  thunderbird

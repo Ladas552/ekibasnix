@@ -9,7 +9,7 @@
 
     services.zerotierone.enable = true;
     services.zerotierone.joinNetworks = [ 
-      "$(cat ${config.sops.secrets."mystuff/my_zero".path})"
+      "$(cat ${config.sops.secrets."mystuff/zero_net_id".path})"
     ];
     services.zerotierone.localConf = { 
       settings = { 
