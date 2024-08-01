@@ -3,7 +3,7 @@
 {
 
   programs.qutebrowser = {
-    enable = true;
+    enable = false;
 
   };
 }
