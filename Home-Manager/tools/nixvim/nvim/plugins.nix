@@ -27,7 +27,7 @@
         servers = {
           bashls.enable = true;
           lua-ls.enable = true;
-          nil_ls.enable = true;
+          nil-ls.enable = true;
         };
       };
 
@@ -111,6 +111,7 @@
             #cmp
             cmp = {
             enable = true;
+            autoEnableSources = false;
             settings = {
             completion.completeopt = "menu,menuone,preview,noselect";
             snippet.expand = /*lua*/ ''
@@ -168,6 +169,8 @@
       #AI
       copilot-lua = {
         enable = true;
+        panel.enabled = false;
+        suggestion.enabled = false;
         filetypes = {
           javascript = true;
           typescript = true;
@@ -209,27 +212,29 @@
 
       treesitter = {
         enable = true;
-        indent = true;
         folding = true;
         nixvimInjections = true;
-        ensureInstalled = [
-          "bash"
-          "fish"
-          "gitignore"
-          "html"
-          "latex"
-          "lua"
-          "make"
-          "markdown"
-          "markdown_inline"
-          "kotlin"
-          "nix"
-          "python"
-          "vim"
-          "rust"
-          "yaml"
-          "zathurarc"
-        ];
+        settings = {
+          indent.enable = true;
+          ensure_installed = [
+            "bash"
+            "fish"
+            "gitignore"
+            "html"
+            "latex"
+            "lua"
+            "make"
+            "markdown"
+            "markdown_inline"
+            "kotlin"
+            "nix"
+            "python"
+            "vim"
+            "rust"
+            "yaml"
+            "zathurarc"
+          ];
+        };
       };
 
       image = {

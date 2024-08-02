@@ -4,6 +4,10 @@
 
   programs.kitty = {
     enable = true;
+    font = {
+      name = "JetBrainsMonoNL Nerd Font Mono";
+      size = 16.0;
+    };
     settings = {
       #kitty.conf
       enable_audio_bell = false;

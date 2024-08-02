@@ -9,6 +9,7 @@
     ./ranger
     ./kitty
     ./qutebrowser
+    ./vim
     ./mpd
     #   ./emacs
   ];
@@ -54,7 +55,7 @@
     };
     syncthing = {
       enable = true;
-      tray = true;
+      tray.enable = true;
     };
   };
 }

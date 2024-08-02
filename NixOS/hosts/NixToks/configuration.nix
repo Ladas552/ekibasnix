@@ -17,7 +17,7 @@
   zerotier.enable = true;
   bluetooth.enable = true;
   printers.enable = true;
-  virtualisation.enable = true;
+  # virtualisation.enable = true;
 
   # Bootloader.
   boot.loader = {

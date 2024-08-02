@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 {
   programs.nixvim = {
-    options = {
+    opts = {
       #Numbers on side 
       nu = true;
       relativenumber = true;

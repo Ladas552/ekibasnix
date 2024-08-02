@@ -24,10 +24,8 @@
         name = "Noto Color Emoji";
       };
       monospace = {
-       # package = pkgs.jetbrains-mono;
-       # name = "JetBrainsMono";
-        package = pkgs.scientifica;
-        name = "scientifica";
+        package = pkgs.jetbrains-mono;
+        name = "JetBrainsMono";
       };
       sizes = {
         terminal = 14;
