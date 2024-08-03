@@ -8,8 +8,7 @@
     ./desktop/games.nix
     ./desktop/lightdm.nix
     ./desktop/otd.nix
-    #./desktop/stylixx.nix
-    ./desktop/xfce.nix
+    ./desktop/sessions.nix
     ./network/bluetooth.nix
     ./network/openssh.nix
     ./network/zerotier.nix

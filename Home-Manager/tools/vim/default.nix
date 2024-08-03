@@ -14,9 +14,6 @@
       smartcase = true; # if you include mixed case in your search, assumes you want case-sensitive
       #Colors
       background = "dark"; # colorschemes that can be light or dark will be made dark
-      #Backspace
-      #Undo
-      undofile = true;
     };
   };
 }

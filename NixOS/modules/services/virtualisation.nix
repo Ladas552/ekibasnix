@@ -6,6 +6,10 @@
   };
 
   config = lib.mkIf config.virtualisation.enable {
+    environment.systemPackages = with pkgs; [
+      open-vm-tools
+      libvirt-glib
+    ];
     services.spice-vdagentd.enable = true;
     virtualisation.libvirtd = {
       enable = true;

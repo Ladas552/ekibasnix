@@ -8,7 +8,7 @@
     ./nixvim
     ./ranger
     ./kitty
-    ./qutebrowser
+    # ./qutebrowser
     ./vim
     ./mpd
     #   ./emacs

@@ -13,7 +13,7 @@
   lightdm.enable = true;
   openssh.enable = true;
   printers.enable = true;
-  xfce.enable = true;
+  sessions.enable = true;
   zerotier.enable = true;
 
   # Bootloader.

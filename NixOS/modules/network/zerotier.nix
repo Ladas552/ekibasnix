@@ -7,13 +7,15 @@
 
   config = lib.mkIf config.zerotier.enable {
 
-    services.zerotierone.enable = true;
-    services.zerotierone.joinNetworks = [ 
-      "$(cat ${config.sops.secrets."mystuff/zero_net_id".path})"
-    ];
-    services.zerotierone.localConf = { 
-      settings = { 
-        softwareUpdate = "disable";
+    services.zerotierone = {
+      enable = true;
+      joinNetworks = [ 
+        "$(cat ${config.sops.secrets."mystuff/zero_net_id".path})"
+      ];
+      localConf = { 
+        settings = { 
+          softwareUpdate = "disable";
+        };
       };
     };
   };

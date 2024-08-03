@@ -9,7 +9,7 @@
 
   #modules
   otd.enable = true;
-  xfce.enable = true;
+  sessions.enable = true;
   fonts.enable = true;
   games.enable = true;
   lightdm.enable = true;
@@ -17,7 +17,7 @@
   zerotier.enable = true;
   bluetooth.enable = true;
   printers.enable = true;
-  # virtualisation.enable = true;
+ # virtualisation.enable = true;
 
   # Bootloader.
   boot.loader = {
@@ -65,13 +65,11 @@
     systemPackages = with pkgs; [
       # whatever I couldn't install in Home Manager
       python3
-      nvtopPackages.full # they need to update cuda for unstable to use it in home manager
+#      nvtopPackages.full # they need to update cuda for unstable to use it in home manager
       home-manager
       cachix
       gcc
       gnumake
-      open-vm-tools
-      libvirt-glib
       niri
       sops
     ];
