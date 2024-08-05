@@ -33,6 +33,7 @@
       copypaste = ''${pkgs.wgetpaste}/bin/wgetpaste'';
       cmatrix = ''${pkgs.unimatrix}/bin/unimatrix -f -s 95'';
       ls = ''ls --hyperlink=auto'';
+      fastfetch = ''${pkgs.fastfetch}/bin/fastfetch | ${pkgs.lolcat}/bin/lolcat '';
     };
   };
 }

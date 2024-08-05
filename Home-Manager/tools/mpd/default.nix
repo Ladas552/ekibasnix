@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
+  home.packages = with pkgs; [
+    rmpc
+    mpc-cli
+  ];
   programs.ncmpcpp = {
     enable = true;
     bindings = [

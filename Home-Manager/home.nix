@@ -14,6 +14,7 @@
   imports = [
     ./desktop/graphics.nix
     ./desktop/bspwm.nix
+    ./desktop/niri.nix
     ./tools/apps.nix
   ];
   # Me
@@ -51,7 +52,6 @@
     qbittorrent
     candy-icons
     catppuccin-cursors
-    mpc-cli
   ];
   nixpkgs.config.allowUnfree = true;
   #  home.file = {

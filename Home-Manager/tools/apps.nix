@@ -2,15 +2,16 @@
 
 {
   imports = [
+    ./fastfetch
     ./fish
     ./git
+    ./kitty
+    ./mpd
     ./mpv
     ./nixvim
     ./ranger
-    ./kitty
-    # ./qutebrowser
     ./vim
-    ./mpd
+    # ./qutebrowser
     #   ./emacs
   ];
   programs = {
@@ -27,9 +28,6 @@
       enable = true;
       enableFishIntegration = true;
     };
-    fastfetch = {
-      enable = true;
-    };
     mangohud = {
       enable = true;
     };
@@ -44,6 +42,12 @@
     };
     obs-studio = {
       enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-vkcapture
+        input-overlay
+        droidcam-obs
+      ];
     };
     # jujutsu = {
     #   enable = true;

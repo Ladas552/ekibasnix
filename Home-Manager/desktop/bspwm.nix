@@ -66,7 +66,7 @@
       "super + space" = "rofi -show";
       "super + x" = "xfce4-session-logout";
       # Gui apps
-      "super + {w,f}" = "{floorp.thunar}";
+      "super + {w,f}" = "{floorp,thunar}";
       # Tuu apps
       "super + {g,m,h,n}" = "kitty -e {qalc,ncmpcpp,btop,nvim}";
       # Screenshot
