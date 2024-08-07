@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  fastfetch = {
+  programs.fastfetch = {
     enable = true;
     settings = {
       logo.source = "nixos_small";

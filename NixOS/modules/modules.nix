@@ -19,6 +19,7 @@
     ./services/sound.nix
     ./services/virtualisation.nix
     ./secrets/sops.nix
+    ./services/ld-nix.nix
   ];
 
   defaultc.enable = lib.mkDefault true;
