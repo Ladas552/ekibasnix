@@ -3,10 +3,10 @@
 
 {
   options = {
-    otd.enable = lib.mkEnableOption "enable otd";
+    libinput.enable = lib.mkEnableOption "enable libinput";
   };
 
-  config = lib.mkIf config.otd.enable {
+  config = lib.mkIf config.libinput.enable {
     services.xserver.libinput = {
       enable = true;
       mouse = {
