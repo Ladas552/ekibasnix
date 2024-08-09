@@ -17,7 +17,8 @@
   zerotier.enable = true;
   bluetooth.enable = true;
   printers.enable = true;
-  libinput.enable = true;
+  touchpad.enable = true;
+  powermanager.enable = true;
   # virtualisation.enable = true;
   
   # Bootloader.

@@ -21,6 +21,7 @@
     ./services/printers.nix
     ./services/sound.nix
     ./services/virtualisation.nix
+    ./services/powermanager.nix
   ];
 
   defaultc.enable = lib.mkDefault true;

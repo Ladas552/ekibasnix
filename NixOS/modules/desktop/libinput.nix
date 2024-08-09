@@ -3,21 +3,21 @@
 
 {
   options = {
-    libinput.enable = lib.mkEnableOption "enable libinput";
+    touchpad.enable = lib.mkEnableOption "enable touchpad";
   };
 
-  config = lib.mkIf config.libinput.enable {
-    services.xserver.libinput = {
+  config = lib.mkIf config.touchpad.enable {
+    services.libinput = {
       enable = true;
       mouse = {
         scrollMethod = "button";
-        sctrollButton = "3";
+        scrollButton = 3;
       };
       touchpad = {
         tapping = true;
         naturalScrolling = true;
         scrollMethod = "edge";
-        touchpad.disableWhileTypin = false;
+        disableWhileTyping = false;
         clickMethod = "clickfinger";
       };
     };
