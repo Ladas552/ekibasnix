@@ -12,7 +12,7 @@
     stylix.url = "github:danth/stylix";
     # Neovim
     nixvim.url = "github:nix-community/nixvim";
-    nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    #   nixvim.inputs.nixpkgs.follows = "nixpkgs";
     neorg-overlay.url = "github:nvim-neorg/nixpkgs-neorg-overlay";
     # Emacs
     emacs-overlay.url = "github:nix-community/emacs-overlay";

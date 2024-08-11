@@ -7,14 +7,6 @@
     # Secrets
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-    # HM module
-    #     home-manager.url = "github:nix-community/home-manager";
-    #     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    # Nixvim
-    #     nixvim.url = "github:nix-community/nixvim";
-    #     nixvim.inputs.nixpkgs.follows = "nixpkgs";
-    # ColorScheme
-    #     stylix.url = "github:danth/stylix";
 
     # Games
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";

@@ -101,6 +101,7 @@
     #XDG_BIN_HOME = "$HOME/.local/bin";
     #PATH = "$HOME/.local/bin";
   };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   #programs.home-manager.path = "$HOME/Nix-dots/Home-Manager";

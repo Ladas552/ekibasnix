@@ -2,28 +2,17 @@
 
 {
   options = {
-    sessions.enable = lib.mkEnableOption "enable sessions";
+    xfce.enable = lib.mkEnableOption "enable xfce";
   };
 
-  config = lib.mkIf config.sessions.enable {
-    # XFCE DE + bspwm and LightDM
-    services = {
-      displayManager.defaultSession = "xfce+bspwm";
-      displayManager.sessionPackages = with pkgs; [
-        niri
-      ];
-      # Enable the X11 windowing system.
-      xserver = {
+  config = lib.mkIf config.xfce.enable {
+    services.xserver = {
         enable = true;
         desktopManager.xfce = {
           enable = true;
-          enableXfwm = false;
+          enableXfwm = lib.mkDefault true;
         };
-        windowManager.bspwm.enable = true;
-        desktopManager.xterm.enable = false;
-      };
     };
-    # Exclude some packages
     environment = {
       xfce.excludePackages = with pkgs.xfce; [
         mousepad
@@ -40,5 +29,6 @@
         xfce4-weather-plugin
       ];
     };
+
   };
 }

@@ -9,10 +9,6 @@
   config = lib.mkIf config.touchpad.enable {
     services.libinput = {
       enable = true;
-      mouse = {
-        scrollMethod = "button";
-        scrollButton = 3;
-      };
       touchpad = {
         tapping = true;
         naturalScrolling = true;

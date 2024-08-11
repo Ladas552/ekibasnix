@@ -9,10 +9,11 @@
 
   #modules
   otd.enable = true;
-  sessions.enable = true;
+  bspwm.enable = true;
   fonts.enable = true;
   games.enable = true;
   lightdm.enable = true;
+  # ly.enable = true;
   openssh.enable = true;
   zerotier.enable = true;
   bluetooth.enable = true;
@@ -94,12 +95,10 @@
       "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
     ];
     extra-substituters = [ 
-      "https://yazi.cachix.org"
       "https://cache.garnix.io"
       "https://niri.cachix.org"    
     ];
     extra-trusted-public-keys = [
-      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
       "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
     ];

@@ -30,7 +30,6 @@
           nil-ls.enable = true;
         };
       };
-
       luasnip.enable = true;
       friendly-snippets.enable = true;
       #UI
@@ -165,6 +164,8 @@
       cmp-path.enable = true;
       cmp-buffer.enable = true;
       cmp_luasnip.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-spell.enable = true;
       copilot-cmp.enable = true;
       #AI
       copilot-lua = {

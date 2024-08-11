@@ -9,7 +9,9 @@
     ./desktop/libinput.nix
     ./desktop/lightdm.nix
     ./desktop/otd.nix
-    ./desktop/sessions.nix
+    ./desktop/sessions/xfce.nix
+    ./desktop/sessions/bspwm.nix
+    ./desktop/ly.nix
     ./network/bluetooth.nix
     ./network/openssh.nix
     ./network/zerotier.nix

@@ -7,5 +7,6 @@
   config = lib.mkIf config.powermanager.enable {
     powerManagement.enable = true;
     services.tlp.enable = true;
+    services.power-profiles-daemon.enable = false;
   };
 }
