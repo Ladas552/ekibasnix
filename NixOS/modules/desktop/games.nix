@@ -29,6 +29,7 @@
       winePackages.fonts
       winetricks
       steam-run
+      stepmania
       # Emulators
       duckstation
       mgba

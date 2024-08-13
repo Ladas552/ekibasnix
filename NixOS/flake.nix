@@ -11,9 +11,11 @@
     # Games
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name of nixpkgs input you want to use
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";    
   };
 
-  outputs = { self, nixpkgs, aagl, sops-nix} @inputs: let
+  outputs = { self, nixpkgs, aagl, sops-nix, nix-minecraft} @inputs: let
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
@@ -24,6 +26,7 @@
           ./hosts/NixToks/configuration.nix
           inputs.aagl.nixosModules.default
           inputs.sops-nix.nixosModules.sops
+          inputs.nix-minecraft.nixosModules.minecraft-servers
         ];
       };
 

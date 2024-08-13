@@ -21,6 +21,9 @@
       "extension.webm" = {
         loop-file= "inf";
       };
+      "extension.gif" = {
+        loop-file= "inf";
+      };
     };
     bindings = {
       "[" = "add speed -0.25";

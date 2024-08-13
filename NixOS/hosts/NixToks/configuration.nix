@@ -12,6 +12,7 @@
   bspwm.enable = true;
   fonts.enable = true;
   games.enable = true;
+  minecraft.enable = true;
   lightdm.enable = true;
   # ly.enable = true;
   openssh.enable = true;

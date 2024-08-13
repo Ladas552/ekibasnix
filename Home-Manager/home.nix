@@ -25,6 +25,8 @@
   # Standalone Packages for user
   home.packages = with pkgs; [
     #pkgs-stable. 
+    blender
+    aseprite
     floorp
     hello
     cowsay

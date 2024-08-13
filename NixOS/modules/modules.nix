@@ -6,6 +6,7 @@
     ./defaultc.nix
     ./desktop/fonts.nix
     ./desktop/games.nix
+    ./desktop/minecraft.nix
     ./desktop/libinput.nix
     ./desktop/lightdm.nix
     ./desktop/otd.nix

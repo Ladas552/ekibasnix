@@ -262,9 +262,11 @@
       presence-nvim = {
         enable = true;
         blacklist = [
-          ".norg"
-          ".txt"
+          "norg"
+          "txt"
         ];
+        neovimImageText = "I am showing off, yeah";
+
       };
     };
   };
