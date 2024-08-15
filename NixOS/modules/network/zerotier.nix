@@ -12,11 +12,11 @@
       joinNetworks = [ 
         "$(cat ${config.sops.secrets."mystuff/zero_net_id".path})"
       ];
-      localConf = { 
-        settings = { 
-          softwareUpdate = "disable";
-        };
-      };
+      # localConf = { 
+      #   settings = { 
+      #     softwareUpdate = "disable";
+      #   };
+      # };
     };
   };
 }

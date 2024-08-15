@@ -12,11 +12,11 @@
   bspwm.enable = true;
   fonts.enable = true;
   games.enable = true;
-  minecraft.enable = true;
+  # minecraft.enable = true; Don't need right now
   lightdm.enable = true;
   # ly.enable = true;
   openssh.enable = true;
-  zerotier.enable = true;
+  # zerotier.enable = true; Compile failure
   bluetooth.enable = true;
   printers.enable = true;
   touchpad.enable = true;
