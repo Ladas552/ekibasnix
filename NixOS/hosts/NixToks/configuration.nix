@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./../../modules/modules.nix
     ];
-
+programs.kdeconnect.enable = true;
   #modules
   otd.enable = true;
   bspwm.enable = true;
@@ -16,13 +16,15 @@
   lightdm.enable = true;
   # ly.enable = true;
   openssh.enable = true;
-  # zerotier.enable = true; Compile failure
+  zerotier.enable = true; 
   bluetooth.enable = true;
   printers.enable = true;
   touchpad.enable = true;
   powermanager.enable = true;
   # virtualisation.enable = true;
 
+  #trim your SSD
+  services.fstrim.enable = true;
   # Latest kernel
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   # Bootloader.

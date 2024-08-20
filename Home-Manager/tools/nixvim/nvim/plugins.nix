@@ -6,16 +6,17 @@
       pkgs.vimPlugins."gitsigns-nvim"
       pkgs.vimPlugins."lspkind-nvim"
       pkgs.vimPlugins."overseer-nvim"
-      (pkgs.vimUtils.buildVimPlugin {
-        name = "markview.nvim";
-        src = pkgs.fetchFromGitHub {
-          owner = "OXY2DEV";
-          repo = "markview.nvim";
-          rev = "e165c46b4c198c1a67669ccbd90d2c2488da849a";
-          sha256 = "02flz6055xz94m78a5gaa1k4f6npffm7idr4wgjyas3lplmvr9ab";
-          # nix run nixpkgs#nix-prefetch-git https://github.com/OXY2DEV/markview.nvim.git
-        };
-      })
+      pkgs.vimPlugins."telescope-manix"
+      # (pkgs.vimUtils.buildVimPlugin {
+      #   name = "markview.nvim";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "OXY2DEV";
+      #     repo = "markview.nvim";
+      #     rev = "3adfe75139f755eace69277b7097d0376cb6068a";
+      #     sha256 = "1g97w059fkcrncwxcbyqk4n1d3xl7cffm6l6faswsqhih63zrbcd";
+      #     # nix run nixpkgs#nix-prefetch-git https://github.com/OXY2DEV/markview.nvim.git
+      #   };
+      # })
     ];
     plugins = {
       #  neorg = {
@@ -44,55 +45,58 @@
           full_path_list = [
             "update_stuff"
           ];
-          save_path = /*lua*/ ''
+          save_path = ''
             function()
               return vim.fn.stdpath("cache") .. "/arrow"
             end
-            '';
-            global_bookmarks = true;
-            always_show_path = true;
-            separate_by_branch = true;
-            buffer_leader_key = "m";
-            };
-            };
+          '';
+          global_bookmarks = true;
+          always_show_path = true;
+          separate_by_branch = true;
+          buffer_leader_key = "m";
+        };
+      };
 
-            barbar = {
-            enable = true;
-            settings = {
-            animation = false;
-            auto_hide = 1;
-            };
-            };
+      barbar = {
+        enable = true;
+        settings = {
+          animation = false;
+          auto_hide = 1;
+        };
+      };
 
-            ccc = {
-            enable = true;
-            settings = {
-            highlighter = {
+      ccc = {
+        enable = true;
+        settings = {
+          highlighter = {
             auto_enable = true;
-            };
-            };
-            };
+          };
+        };
+      };
 
-            telescope = {
-            enable = true;
-            settings.defaults = {
-            path_display = "truncate "; 
-            };
-            };
+      telescope = {
+        enable = true;
+        enabledExtensions = [
+          "manix"
+        ];
+        settings.defaults = {
+          path_display = "truncate "; 
+        };
+      };
 
-            dashboard = {
-            enable = true;
-            settings = {
-            theme = "doom";
-            shortcut_type = "number";
-            config = {
+      dashboard = {
+        enable = true;
+        settings = {
+          theme = "doom";
+          shortcut_type = "number";
+          config = {
             header = [
-            ''                                                     ''          
-            ''  |                 |               ___|  ___| ___ \ ''
-            ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
-            ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
-            '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
-            ''                                                     ''        
+              ''                                                     ''          
+              ''  |                 |               ___|  ___| ___ \ ''
+              ''  |       _` |   _` |   _` |   __|  __ \  __ \    ) |''
+              ''  |      (   |  (   |  (   | \__ \    ) |   ) |  __/ ''
+              '' _____| \__,_| \__,_| \__,_| ____/ ____/ ____/ _____|''
+              ''                                                     ''        
             ];
             center = [
               { action = "Telescope oldfiles";   desc = " Recent files"; icon = "󰥔 ";  key = "R";}
@@ -104,16 +108,16 @@
               { action = "qa";                   desc = " Quit";         icon = "󰩈 ";  key = "Q";}
             ];
             footer = ["Just Do Something Already!"];
-            };
-            };
-            };
-            #cmp
-            cmp = {
-            enable = true;
-            autoEnableSources = false;
-            settings = {
-            completion.completeopt = "menu,menuone,preview,noselect";
-            snippet.expand = /*lua*/ ''
+          };
+        };
+      };
+      #cmp
+      cmp = {
+        enable = true;
+        autoEnableSources = false;
+        settings = {
+          completion.completeopt = "menu,menuone,preview,noselect";
+          snippet.expand = /*lua*/ ''
             function(args)
               require("luasnip").lsp_expand(args.body)
             end,

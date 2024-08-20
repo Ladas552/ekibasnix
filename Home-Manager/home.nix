@@ -26,33 +26,33 @@
   home.packages = with pkgs; [
     #pkgs-stable. 
     blender
+    candy-icons
+    catppuccin-cursors
+    cowsay
     floorp
     hello
-    cowsay
-    vesktop
-    keepassxc
-    libqalculate
-    manix
-    lshw
-    libreoffice-fresh
-    pavucontrol
-    rofi-wayland
-    telegram-desktop
-    xarchiver
-    python3
-    nuspell
     hunspell
     hunspellDicts.en-us-large
     hunspellDicts.ru-ru
+    keepassxc
+    libqalculate
+    libreoffice-fresh
+    lshw
+    manix
     numlockx
+    nuspell
     pamixer
+    pavucontrol
+    peek
+    python3
+    qbittorrent
+    rofi-wayland
+    telegram-desktop
     texlive.combined.scheme-small
     typst
+    vesktop
+    xarchiver
     xclip
-    peek
-    qbittorrent
-    candy-icons
-    catppuccin-cursors
   ];
   nixpkgs.config.allowUnfree = true;
   #  home.file = {

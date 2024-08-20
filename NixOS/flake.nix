@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixpkgs-stable.url = "github:nixos/nixpkgs/release-24.05";
+
     # Secrets
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -15,12 +17,14 @@
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";    
   };
 
-  outputs = { self, nixpkgs, aagl, sops-nix, nix-minecraft} @inputs: let
+  outputs = { self, nixpkgs, nixpkgs-stable, aagl, sops-nix, nix-minecraft} @inputs: let
     system = "x86_64-linux";
+    # why ppkgs-stable works? here https://discourse.nixos.org/t/allow-unfree-in-flakes/29904/2
+    pkgs-stable = import nixpkgs-stable { system = "x86_64-linux"; config.allowUnfree = true; };
   in {
     nixosConfigurations = {
       NixToks = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit system; inherit inputs; };
+        specialArgs = { inherit system inputs pkgs-stable; };
 
         modules = [
           ./hosts/NixToks/configuration.nix

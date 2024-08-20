@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ...}:
+{ config, lib, pkgs, pkgs-stable, ...}:
 
 {
   options = {
@@ -8,15 +8,16 @@
   config = lib.mkIf config.zerotier.enable {
 
     services.zerotierone = {
+      package = pkgs-stable.zerotierone;
       enable = true;
       joinNetworks = [ 
         "$(cat ${config.sops.secrets."mystuff/zero_net_id".path})"
       ];
-      # localConf = { 
-      #   settings = { 
-      #     softwareUpdate = "disable";
-      #   };
-      # };
+      localConf = { 
+        settings = { 
+          softwareUpdate = "disable";
+        };
+      };
     };
   };
 }
