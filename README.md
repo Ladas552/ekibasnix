@@ -12,3 +12,12 @@
 4. Declare much more packages
 5. Declare Nix with Neorg tangle
 6. ~Make secure SSH connection to my phone to edit on the go~
+
+# Why Archived? 
+I want to try to use my Home-manager as a module to NixOS and not standalone, following that I don't use HM with other OS if anything. And I have seen the benefits for reproduce ability with it being a module.
+
+And it all requires quite a big refactor that changes config drastically. So starting from a different repository would be easier. 
+
+Also, some people might prefer having standalone NixOS and Home-manager, so I will just leave this configuration there. I will not add any changes to it even if somethings are broken.
+
+Also Ekibasnix name now will loose all meaning. And idk how to change repository name with a link in GitHub. So yeah, that is also a reason :P
